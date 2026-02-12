@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Something Special 💌 For Nusu</title>
+  <!-- Google Fonts: Clean & Readable Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #1a0c0c 0%, #3b1e1e 100%);
+      color: #fff5e6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    .romantic-bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 30% 40%, #b33b3b20 0%, #4a1e1e 100%);
+      z-index: -2;
+    }
+    .rose-container {
+      position: fixed; bottom: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: -1; overflow: hidden;
+    }
+    .rose {
+      position: absolute; bottom: -50px; width: 30px; height: 30px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ffb7c5" d="M12 2C9 2 6 4 6 8c0 2 1 4 2 6-1-1-2-2-2-4 0-3 3-5 6-5s6 2 6 5c0 2-1 4-2 4 1-2 2-4 2-6 0-4-3-6-6-6z"/><path fill="%23ff8a9f" d="M12 6c-2 0-4 1-4 3 0 1 .5 2 1 3-.5-1-1-2-1-3 0-2 2-3 4-3s4 1 4 3c0 1-.5 2-1 3 .5-1 1-2 1-3 0-2-2-3-4-3z"/><path fill="%23c44969" d="M12 10c-1 0-2 .4-2 1 0 .6 1 2 2 3 1-1 2-2.4 2-3 0-.6-1-1-2-1z"/></svg>');
+      background-size: contain; background-repeat: no-repeat;
+      animation: rise linear infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+      100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
+    }
+    .page { min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; position: relative; }
+    .hidden { display: none !important; }
+    .first-content { text-align: center; z-index: 10; background: rgba(30, 15, 15, 0.3); backdrop-filter: blur(5px); padding: 3rem 4rem; border-radius: 60px 20px 60px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid #ffc2c280; }
+    .big-special { font-family: 'Playfair Display', serif; font-size: 5.5rem; color: #ffe3e3; text-shadow: 0 0 15px #ff6f91, 0 0 40px #b33b3b; letter-spacing: 6px; margin-bottom: 0.8rem; font-weight: 700; }
+    .for-nusu { font-size: 2.3rem; font-weight: 500; color: #ffd9d9; margin-bottom: 2.2rem; border-bottom: 2px dashed #ffa5a5; display: inline-block; padding-bottom: 6px; font-family: 'Playfair Display', serif; }
+    .btn-begin, .btn-surprise, .btn-back { 
+      background: transparent; 
+      border: 2.5px solid #ffafaf; 
+      color: #ffdfdf; 
+      padding: 14px 40px; 
+      font-size: 1.8rem; 
+      font-weight: 600; 
+      border-radius: 60px; 
+      cursor: pointer; 
+      transition: all 0.35s ease; 
+      box-shadow: 0 0 15px #ff8d8d50; 
+      text-shadow: 0 0 8px #ff4f4f; 
+      font-family: 'Poppins', sans-serif; 
+      letter-spacing: 3px; 
+      margin-top: 20px; 
+    }
+    .btn-begin:hover, .btn-surprise:hover, .btn-back:hover { 
+      background: #ffb3b3; 
+      color: #2e0e0e; 
+      border-color: #fff0f0; 
+      box-shadow: 0 0 30px #ff8484, 0 0 60px #ff3b3b; 
+      transform: scale(1.08); 
+      border-width: 3px; 
+    }
+    .letter-paper { 
+      background: #fff9f2; 
+      background-image: linear-gradient(to bottom, #ffecec, #fff5e6); 
+      padding: 2.5rem 2.8rem; 
+      max-width: 750px; 
+      width: 90%; 
+      border-radius: 8px 40px 8px 40px; 
+      box-shadow: 0 20px 30px rgba(0,0,0,0.5), 0 0 0 2px #ffe0e0, 0 0 0 6px #dba1a1; 
+      color: #3d1e1e; 
+      font-family: 'Poppins', sans-serif; 
+      font-size: 1.3rem; 
+      line-height: 1.8; 
+      border: 1px dashed #b36464; 
+      margin-bottom: 30px; 
+    }
+    .letter-paper p { 
+      margin-bottom: 1.2rem; 
+      font-weight: 400; 
+    }
+    .signature { 
+      text-align: right; 
+      font-size: 1.8rem; 
+      color: #a14242; 
+      margin-top: 30px; 
+      border-top: 2px solid #dba1a1; 
+      padding-top: 20px; 
+      font-weight: 600; 
+      font-family: 'Playfair Display', serif; 
+    }
+    .section-title { 
+      font-size: 2.8rem; 
+      color: #ffdbdb; 
+      margin: 40px 0 20px; 
+      text-shadow: 2px 2px 0 #672727; 
+      font-family: 'Playfair Display', serif; 
+      border-bottom: 3px solid #ffa4a4; 
+      display: inline-block; 
+      padding-bottom: 5px; 
+      font-weight: 700; 
+    }
+    .gallery { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; }
+    .memory-item { 
+      background: rgba(255, 225, 225, 0.2); 
+      backdrop-filter: blur(10px); 
+      border: 2px solid #ffc5c5; 
+      border-radius: 30px 8px 30px 8px; 
+      margin: 20px 0; 
+      padding: 25px; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      opacity: 0; 
+      transform: translateY(40px); 
+      animation: fadeSlide 0.9s forwards; 
+      box-shadow: 0 15px 25px #1f0f0f; 
+      width: 100%; 
+    }
+    .memory-item:nth-child(1) { animation-delay: 0.3s; }
+    .memory-item:nth-child(2) { animation-delay: 3.3s; }
+    .memory-item:nth-child(3) { animation-delay: 6.3s; }
+    .memory-item:nth-child(4) { animation-delay: 9.3s; }
+    .memory-item:nth-child(5) { animation-delay: 12.3s; }
+    @keyframes fadeSlide { to { opacity: 1; transform: translateY(0); } }
+    .memory-img { 
+      width: 280px; 
+      height: 250px; 
+      object-fit: cover; 
+      border-radius: 30px 8px 30px 8px; 
+      border: 8px solid #ffd9b3; 
+      box-shadow: 0 0 30px #ff9494; 
+      margin-bottom: 15px; 
+    }
+    .memory-note { 
+      font-size: 1.5rem; 
+      color: #fff0e5; 
+      background: #a13b3bd9; 
+      padding: 10px 35px; 
+      border-radius: 50px; 
+      font-family: 'Poppins', sans-serif; 
+      font-weight: 500; 
+      border: 2px solid #ffdbdb; 
+      letter-spacing: 1px; 
+      text-shadow: 1px 1px 0 #4d1e1e; 
+    }
+    .nusu-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 35px; 
+      width: 100%; 
+      max-width: 1100px; 
+      margin: 30px 0; 
+    }
+    .nusu-card { 
+      background: #552a2a; 
+      padding: 18px; 
+      border: 10px double #ffaeae; 
+      border-radius: 40px 10px 40px 10px; 
+      box-shadow: 0 0 0 5px #b36363, 0 15px 25px black; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      transition: transform 0.3s; 
+    }
+    .nusu-card:hover { transform: scale(1.02); }
+    .nusu-card img { 
+      width: 100%; 
+      height: 220px; 
+      object-fit: cover; 
+      border-radius: 30px 6px 30px 6px; 
+      border: 6px solid #ffd2b3; 
+    }
+    .nusu-note { 
+      font-size: 1.3rem; 
+      color: #fffcf0; 
+      margin-top: 18px; 
+      font-family: 'Poppins', sans-serif; 
+      font-weight: 500; 
+      background: #7a3a3a; 
+      width: 100%; 
+      text-align: center; 
+      padding: 12px; 
+      border-radius: 50px; 
+      border: 3px solid #ffcaca; 
+      letter-spacing: 1px; 
+      text-shadow: 1px 1px 0 #3d1e1e; 
+    }
+    .big-story-text { 
+      font-size: 2rem; 
+      color: #ffdbdb; 
+      text-align: center; 
+      margin: 25px 0 10px; 
+      font-family: 'Playfair Display', serif; 
+      font-weight: 600; 
+      background: #6b2b2b80; 
+      padding: 15px 30px; 
+      border-radius: 60px; 
+      border: 4px solid #ffc5c5; 
+      line-height: 1.4; 
+    }
+    .btn-surprise { 
+      font-size: 2rem; 
+      padding: 12px 55px; 
+      margin-top: 30px; 
+      margin-bottom: 60px; 
+    }
+    .tiny-message-paper { 
+      max-width: 800px; 
+      width: 90%; 
+      background: #fff9f2; 
+      padding: 2.5rem 3rem; 
+      border-radius: 20px 80px 20px 80px; 
+      box-shadow: 0 0 0 8px #ffd0d0, 0 25px 35px black; 
+      color: #2c1515; 
+      font-size: 1.3rem; 
+    }
+    .message-line { 
+      font-family: 'Poppins', sans-serif; 
+      font-weight: 400; 
+      border-bottom: 1px dashed #c27171; 
+      padding: 12px 0; 
+      display: flex; 
+      align-items: center; 
+      gap: 15px; 
+      font-size: 1.2rem; 
+      color: #3a1a1a; 
+    }
+    .emoji-floating { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      pointer-events: none; 
+      z-index: 0; 
+      overflow: hidden; 
+    }
+    .love-emoji { 
+      position: absolute; 
+      font-size: 2.6rem; 
+      opacity: 0.4; 
+      animation: floatEmoji 8s infinite ease-in-out; 
+      user-select: none; 
+    }
+    @keyframes floatEmoji { 
+      0% { transform: translateY(0) rotate(0); opacity: 0.3; } 
+      50% { transform: translateY(-30px) rotate(10deg); opacity: 0.7; } 
+      100% { transform: translateY(0) rotate(0); opacity: 0.3; } 
+    }
+    .back-button-container {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    .btn-back {
+      font-size: 1.8rem;
+      padding: 12px 55px;
+    }
+  </style>
+</head>
+<body>
+  <div class="romantic-bg"></div>
+  <div class="rose-container" id="roseContainer"></div>
+
+  <!-- PAGE 1 -->
+  <div id="page1" class="page">
+    <div class="first-content">
+      <div class="big-special">Something Special</div>
+      <div class="for-nusu">💖 For You Nusu 💖</div>
+      <button id="clickToBegin" class="btn-begin">Click to Begin</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2" class="page hidden">
+    <!-- Love letter -->
+    <div class="letter-paper">
+      <p>My Dearest Nusu,</p>
+      <p>Every moment with you is like a petal from heaven's own rose. You walked into my life and painted everything gold. Your smile is my morning, your laughter my favorite melody.</p>
+      <p>With you, I've found a love that feels like poetry — infinite and gentle. You are the reason my heart beats softer and stronger at the same time.</p>
+      <p>I promise to cherish you, annoy you, love you, and hold your hand through all our seasons.</p>
+      <div class="signature">Your Husband, <br>Fojle Rabby 💘</div>
+    </div>
+
+    <!-- 🌹🌹🌹 Your 5 Real Pictures 🌹🌹🌹 -->
+    <h2 class="section-title">💕 Our Beautiful Memories 💕</h2>
+    <div class="gallery">
+      <!-- 1. First Meet -->
+      <div class="memory-item">
+        <img class="memory-img" src="https://i.postimg.cc/v4b2vYGk/First-Meet.jpg" alt="First Meet">
+        <div class="memory-note">✨ This is our First Meet ✨</div>
+      </div>
+      <!-- 2. First Date -->
+      <div class="memory-item">
+        <img class="memory-img" src="https://i.postimg.cc/3kYfZ8K5/First-Meet2.jpg" alt="First Date">
+        <div class="memory-note">💘 Our First Date 💘</div>
+      </div>
+      <!-- 3. First Gift -->
+      <div class="memory-item">
+        <img class="memory-img" src="https://i.postimg.cc/Snk1GSyk/Nupur.jpg" alt="First Gift">
+        <div class="memory-note">🌸 My First Gift For You 🌸</div>
+      </div>
+      <!-- 4. First Propose -->
+      <div class="memory-item">
+        <img class="memory-img" src="https://i.postimg.cc/5XbKm4fP/1st-propose.jpg" alt="First Propose">
+        <div class="memory-note">💎 First Time Physically Propose 💎</div>
+      </div>
+      <!-- 5. Walk Together -->
+      <div class="memory-item">
+        <img class="memory-img" src="https://i.postimg.cc/nXpS1FHx/Walk-Together.jpg" alt="Walk Together">
+        <div class="memory-note">🌿 First Time Walked by keeping hand Together 🌿</div>
+      </div>
+    </div>
+
+    <!-- 🌟🌟🌟 Nusu's 6 Photos 🌟🌟🌟 -->
+    <h2 class="section-title">🌟 Nusu's Glow 🌟</h2>
+    <div class="nusu-grid">
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/75599fF8/1.jpg" alt="Nusu 1">
+        <div class="nusu-note">Your smile lights up my world 🌸</div>
+      </div>
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/68F0mBXS/2.jpg" alt="Nusu 2">
+        <div class="nusu-note">You are my only love 💕</div>
+      </div>
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/CR9NQwg2/3.jpg" alt="Nusu 3">
+        <div class="nusu-note">More beautiful than the sky ✨</div>
+      </div>
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/v4CzNGsJ/4.jpg" alt="Nusu 4">
+        <div class="nusu-note">I'm incomplete without you 💫</div>
+      </div>
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/WdxnHsvQ/5.jpg" alt="Nusu 5">
+        <div class="nusu-note">I get lost in your eyes 🌙</div>
+      </div>
+      <div class="nusu-card">
+        <img src="https://i.postimg.cc/xXBR49Q2/6.jpg" alt="Nusu 6">
+        <div class="nusu-note">I'll be yours forever 💖</div>
+      </div>
+    </div>
+
+    <div class="big-story-text">
+      Every Picture Tells our Story,<br>Every Moment is a treasure.
+    </div>
+    <button id="surpriseBtn" class="btn-surprise">Surprise For You</button>
+  </div>
+
+  <!-- PAGE 3 - ENGLISH VERSION -->
+  <div id="page3" class="page hidden">
+    <div class="emoji-floating" id="emojiContainer"></div>
+    <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center;">
+      <div class="tiny-message-paper">
+        <div class="message-line">💌 1. You are the first and last love of my life</div>
+        <div class="message-line">💘 2. Your smile illuminates my entire world</div>
+        <div class="message-line">🌸 3. You are the heroine of every dream I dream</div>
+        <div class="message-line">🌹 4. Your name is in every breath I take</div>
+        <div class="message-line">✨ 5. You are the only address of my love</div>
+        <div class="message-line">💫 6. Every moment with you is extraordinary</div>
+        <div class="message-line">🍃 7. You are the best chapter of my heart</div>
+        <div class="message-line">🌙 8. My love for you is eternal</div>
+        <div class="message-line">🎵 9. You are the best song of my life</div>
+        <div class="message-line">💞 10. All my dreams are only about you</div>
+      </div>
+      <div style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #ffdbdb; margin-top: 40px; border: 3px solid #ffa2a2; padding: 15px 50px; border-radius: 60px; background: #572a2aa0;">
+        Yours forever, Fojle Rabby 💘
+      </div>
+      
+      <!-- 🔥 Back Button - Goes to Page 1 🔥 -->
+      <div class="back-button-container">
+        <button id="backToHomeBtn" class="btn-back">⬅️ Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Roses animation
+      const container = document.getElementById('roseContainer');
+      for (let i = 0; i < 40; i++) {
+        const rose = document.createElement('div'); rose.className = 'rose';
+        const size = Math.floor(Math.random() * 35 + 25);
+        rose.style.width = size + 'px'; rose.style.height = size + 'px';
+        rose.style.left = Math.random() * 100 + '%';
+        rose.style.animationDuration = (Math.random() * 8 + 7) + 's';
+        rose.style.animationDelay = Math.random() * 8 + 's';
+        container.appendChild(rose);
+      }
+      
+      // Emojis for page 3
+      const emojiContainer = document.getElementById('emojiContainer');
+      if (emojiContainer) {
+        const emojis = ['❤️','🧡','💛','💚','💙','💜','🩷','💖','💗','💘','💝','💕','💞','💓'];
+        for (let i = 0; i < 50; i++) {
+          const em = document.createElement('div'); em.className = 'love-emoji';
+          em.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+          em.style.left = Math.random() * 100 + '%'; em.style.top = Math.random() * 100 + '%';
+          em.style.fontSize = (Math.random() * 30 + 24) + 'px';
+          em.style.animationDuration = (Math.random() * 6 + 6) + 's';
+          em.style.animationDelay = Math.random() * 5 + 's';
+          emojiContainer.appendChild(em);
+        }
+      }
+      
+      // Page navigation
+      const page1 = document.getElementById('page1');
+      const page2 = document.getElementById('page2');
+      const page3 = document.getElementById('page3');
+      
+      // Click to Begin - Page 1 to Page 2
+      document.getElementById('clickToBegin').addEventListener('click', function() {
+        page1.classList.add('hidden');
+        page2.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // Surprise Button - Page 2 to Page 3
+      document.getElementById('surpriseBtn').addEventListener('click', function() {
+        page2.classList.add('hidden');
+        page3.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // Back Button - Page 3 to Page 1 (Direct)
+      document.getElementById('backToHomeBtn').addEventListener('click', function() {
+        page3.classList.add('hidden');
+        page1.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
