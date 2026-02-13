@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Something Special 💌 For Nusu</title>
   <!-- Google Fonts: Clean & Readable Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
       color: #fff5e6;
       scroll-behavior: smooth;
       overflow-x: hidden;
+      width: 100%;
     }
     .romantic-bg {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -34,26 +35,64 @@
       0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
       100% { transform: translateY(-110vh) rotate(20deg); opacity: 0; }
     }
-    .page { min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; position: relative; }
+    .page { 
+      min-height: 100vh; 
+      width: 100%; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 1.5rem 1rem; 
+      position: relative; 
+    }
     .hidden { display: none !important; }
-    .first-content { text-align: center; z-index: 10; background: rgba(30, 15, 15, 0.3); backdrop-filter: blur(5px); padding: 3rem 4rem; border-radius: 60px 20px 60px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid #ffc2c280; }
-    .big-special { font-family: 'Playfair Display', serif; font-size: 5.5rem; color: #ffe3e3; text-shadow: 0 0 15px #ff6f91, 0 0 40px #b33b3b; letter-spacing: 6px; margin-bottom: 0.8rem; font-weight: 700; }
-    .for-nusu { font-size: 2.3rem; font-weight: 500; color: #ffd9d9; margin-bottom: 2.2rem; border-bottom: 2px dashed #ffa5a5; display: inline-block; padding-bottom: 6px; font-family: 'Playfair Display', serif; }
+    .first-content { 
+      text-align: center; 
+      z-index: 10; 
+      background: rgba(30, 15, 15, 0.3); 
+      backdrop-filter: blur(5px); 
+      padding: 2rem 1.5rem; 
+      border-radius: 40px 15px 40px 15px; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+      border: 1px solid #ffc2c280; 
+      width: 95%;
+      max-width: 600px;
+    }
+    .big-special { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 3.8rem; 
+      color: #ffe3e3; 
+      text-shadow: 0 0 15px #ff6f91, 0 0 40px #b33b3b; 
+      letter-spacing: 4px; 
+      margin-bottom: 0.5rem; 
+      font-weight: 700; 
+      word-break: break-word;
+    }
+    .for-nusu { 
+      font-size: 2rem; 
+      font-weight: 500; 
+      color: #ffd9d9; 
+      margin-bottom: 1.8rem; 
+      border-bottom: 2px dashed #ffa5a5; 
+      display: inline-block; 
+      padding-bottom: 6px; 
+      font-family: 'Playfair Display', serif; 
+    }
     .btn-begin, .btn-surprise, .btn-back { 
       background: transparent; 
       border: 2.5px solid #ffafaf; 
       color: #ffdfdf; 
-      padding: 14px 40px; 
-      font-size: 1.8rem; 
+      padding: 12px 30px; 
+      font-size: 1.6rem; 
       font-weight: 600; 
-      border-radius: 60px; 
+      border-radius: 50px; 
       cursor: pointer; 
       transition: all 0.35s ease; 
       box-shadow: 0 0 15px #ff8d8d50; 
       text-shadow: 0 0 8px #ff4f4f; 
       font-family: 'Poppins', sans-serif; 
-      letter-spacing: 3px; 
-      margin-top: 20px; 
+      letter-spacing: 2px; 
+      margin-top: 15px; 
     }
     .btn-begin:hover, .btn-surprise:hover, .btn-back:hover { 
       background: #ffb3b3; 
@@ -66,36 +105,36 @@
     .letter-paper { 
       background: #fff9f2; 
       background-image: linear-gradient(to bottom, #ffecec, #fff5e6); 
-      padding: 2.5rem 2.8rem; 
+      padding: 2rem 1.8rem; 
       max-width: 750px; 
-      width: 90%; 
-      border-radius: 8px 40px 8px 40px; 
+      width: 95%; 
+      border-radius: 8px 30px 8px 30px; 
       box-shadow: 0 20px 30px rgba(0,0,0,0.5), 0 0 0 2px #ffe0e0, 0 0 0 6px #dba1a1; 
       color: #3d1e1e; 
       font-family: 'Poppins', sans-serif; 
-      font-size: 1.3rem; 
-      line-height: 1.8; 
+      font-size: 1.2rem; 
+      line-height: 1.7; 
       border: 1px dashed #b36464; 
       margin-bottom: 30px; 
     }
     .letter-paper p { 
-      margin-bottom: 1.2rem; 
+      margin-bottom: 1rem; 
       font-weight: 400; 
     }
     .signature { 
       text-align: right; 
-      font-size: 1.8rem; 
+      font-size: 1.6rem; 
       color: #a14242; 
-      margin-top: 30px; 
+      margin-top: 25px; 
       border-top: 2px solid #dba1a1; 
-      padding-top: 20px; 
+      padding-top: 18px; 
       font-weight: 600; 
       font-family: 'Playfair Display', serif; 
     }
     .section-title { 
-      font-size: 2.8rem; 
+      font-size: 2.3rem; 
       color: #ffdbdb; 
-      margin: 40px 0 20px; 
+      margin: 30px 0 15px; 
       text-shadow: 2px 2px 0 #672727; 
       font-family: 'Playfair Display', serif; 
       border-bottom: 3px solid #ffa4a4; 
@@ -108,59 +147,65 @@
       background: rgba(255, 225, 225, 0.2); 
       backdrop-filter: blur(10px); 
       border: 2px solid #ffc5c5; 
-      border-radius: 30px 8px 30px 8px; 
-      margin: 20px 0; 
-      padding: 25px; 
+      border-radius: 25px 8px 25px 8px; 
+      margin: 15px 0; 
+      padding: 20px; 
       display: flex; 
       flex-direction: column; 
       align-items: center; 
       opacity: 0; 
       transform: translateY(40px); 
-      animation: fadeSlide 0.9s forwards; 
+      animation: fadeSlide 0.8s forwards; 
       box-shadow: 0 15px 25px #1f0f0f; 
       width: 100%; 
     }
-    .memory-item:nth-child(1) { animation-delay: 0.3s; }
-    .memory-item:nth-child(2) { animation-delay: 3.3s; }
-    .memory-item:nth-child(3) { animation-delay: 6.3s; }
-    .memory-item:nth-child(4) { animation-delay: 9.3s; }
-    .memory-item:nth-child(5) { animation-delay: 12.3s; }
+    /* 1 second delay between each image */
+    .memory-item:nth-child(1) { animation-delay: 0.2s; }
+    .memory-item:nth-child(2) { animation-delay: 1.2s; }
+    .memory-item:nth-child(3) { animation-delay: 2.2s; }
+    .memory-item:nth-child(4) { animation-delay: 3.2s; }
+    .memory-item:nth-child(5) { animation-delay: 4.2s; }
+    
     @keyframes fadeSlide { to { opacity: 1; transform: translateY(0); } }
     .memory-img { 
-      width: 280px; 
-      height: 250px; 
+      width: 100%; 
+      max-width: 280px; 
+      height: auto; 
+      aspect-ratio: 1/1;
       object-fit: cover; 
-      border-radius: 30px 8px 30px 8px; 
-      border: 8px solid #ffd9b3; 
+      border-radius: 25px 8px 25px 8px; 
+      border: 6px solid #ffd9b3; 
       box-shadow: 0 0 30px #ff9494; 
       margin-bottom: 15px; 
     }
     .memory-note { 
-      font-size: 1.5rem; 
+      font-size: 1.3rem; 
       color: #fff0e5; 
       background: #a13b3bd9; 
-      padding: 10px 35px; 
-      border-radius: 50px; 
+      padding: 8px 25px; 
+      border-radius: 40px; 
       font-family: 'Poppins', sans-serif; 
       font-weight: 500; 
       border: 2px solid #ffdbdb; 
       letter-spacing: 1px; 
       text-shadow: 1px 1px 0 #4d1e1e; 
+      text-align: center;
+      width: 100%;
     }
     .nusu-grid { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap: 35px; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 25px; 
       width: 100%; 
       max-width: 1100px; 
-      margin: 30px 0; 
+      margin: 20px 0; 
     }
     .nusu-card { 
       background: #552a2a; 
-      padding: 18px; 
-      border: 10px double #ffaeae; 
-      border-radius: 40px 10px 40px 10px; 
-      box-shadow: 0 0 0 5px #b36363, 0 15px 25px black; 
+      padding: 15px; 
+      border: 8px double #ffaeae; 
+      border-radius: 30px 8px 30px 8px; 
+      box-shadow: 0 0 0 4px #b36363, 0 15px 25px black; 
       display: flex; 
       flex-direction: column; 
       align-items: center; 
@@ -169,64 +214,64 @@
     .nusu-card:hover { transform: scale(1.02); }
     .nusu-card img { 
       width: 100%; 
-      height: 220px; 
+      height: 200px; 
       object-fit: cover; 
-      border-radius: 30px 6px 30px 6px; 
-      border: 6px solid #ffd2b3; 
+      border-radius: 25px 6px 25px 6px; 
+      border: 5px solid #ffd2b3; 
     }
     .nusu-note { 
-      font-size: 1.3rem; 
+      font-size: 1.2rem; 
       color: #fffcf0; 
-      margin-top: 18px; 
+      margin-top: 15px; 
       font-family: 'Poppins', sans-serif; 
       font-weight: 500; 
       background: #7a3a3a; 
       width: 100%; 
       text-align: center; 
-      padding: 12px; 
-      border-radius: 50px; 
+      padding: 10px; 
+      border-radius: 40px; 
       border: 3px solid #ffcaca; 
       letter-spacing: 1px; 
       text-shadow: 1px 1px 0 #3d1e1e; 
     }
     .big-story-text { 
-      font-size: 2rem; 
+      font-size: 1.7rem; 
       color: #ffdbdb; 
       text-align: center; 
-      margin: 25px 0 10px; 
+      margin: 20px 0 10px; 
       font-family: 'Playfair Display', serif; 
       font-weight: 600; 
       background: #6b2b2b80; 
-      padding: 15px 30px; 
-      border-radius: 60px; 
+      padding: 12px 20px; 
+      border-radius: 50px; 
       border: 4px solid #ffc5c5; 
       line-height: 1.4; 
     }
     .btn-surprise { 
-      font-size: 2rem; 
-      padding: 12px 55px; 
-      margin-top: 30px; 
-      margin-bottom: 60px; 
+      font-size: 1.8rem; 
+      padding: 12px 45px; 
+      margin-top: 25px; 
+      margin-bottom: 40px; 
     }
     .tiny-message-paper { 
       max-width: 800px; 
-      width: 90%; 
+      width: 95%; 
       background: #fff9f2; 
-      padding: 2.5rem 3rem; 
-      border-radius: 20px 80px 20px 80px; 
-      box-shadow: 0 0 0 8px #ffd0d0, 0 25px 35px black; 
+      padding: 2rem 1.5rem; 
+      border-radius: 15px 60px 15px 60px; 
+      box-shadow: 0 0 0 6px #ffd0d0, 0 25px 35px black; 
       color: #2c1515; 
-      font-size: 1.3rem; 
+      font-size: 1.2rem; 
     }
     .message-line { 
       font-family: 'Poppins', sans-serif; 
       font-weight: 400; 
       border-bottom: 1px dashed #c27171; 
-      padding: 12px 0; 
+      padding: 10px 0; 
       display: flex; 
       align-items: center; 
-      gap: 15px; 
-      font-size: 1.2rem; 
+      gap: 12px; 
+      font-size: 1.1rem; 
       color: #3a1a1a; 
     }
     .emoji-floating { 
@@ -241,7 +286,7 @@
     }
     .love-emoji { 
       position: absolute; 
-      font-size: 2.6rem; 
+      font-size: 2rem; 
       opacity: 0.4; 
       animation: floatEmoji 8s infinite ease-in-out; 
       user-select: none; 
@@ -252,12 +297,24 @@
       100% { transform: translateY(0) rotate(0); opacity: 0.3; } 
     }
     .back-button-container {
-      margin-top: 50px;
-      margin-bottom: 30px;
+      margin-top: 40px;
+      margin-bottom: 25px;
     }
     .btn-back {
-      font-size: 1.8rem;
-      padding: 12px 55px;
+      font-size: 1.6rem;
+      padding: 10px 45px;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      .big-special { font-size: 2.8rem; }
+      .for-nusu { font-size: 1.6rem; }
+      .btn-begin { font-size: 1.4rem; padding: 10px 25px; }
+      .section-title { font-size: 1.9rem; }
+      .memory-note { font-size: 1.1rem; }
+      .nusu-note { font-size: 1rem; }
+      .big-story-text { font-size: 1.4rem; }
+      .message-line { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -353,7 +410,7 @@
   <!-- PAGE 3 - ENGLISH VERSION -->
   <div id="page3" class="page hidden">
     <div class="emoji-floating" id="emojiContainer"></div>
-    <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center;">
+    <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; width: 100%;">
       <div class="tiny-message-paper">
         <div class="message-line">💌 1. You are the first and last love of my life</div>
         <div class="message-line">💘 2. Your smile illuminates my entire world</div>
@@ -366,8 +423,8 @@
         <div class="message-line">🎵 9. You are the best song of my life</div>
         <div class="message-line">💞 10. All my dreams are only about you</div>
       </div>
-      <div style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #ffdbdb; margin-top: 40px; border: 3px solid #ffa2a2; padding: 15px 50px; border-radius: 60px; background: #572a2aa0;">
-        Happy Valentines Day Jan 💘
+      <div style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 600; color: #ffdbdb; margin-top: 35px; border: 3px solid #ffa2a2; padding: 12px 35px; border-radius: 50px; background: #572a2aa0; text-align: center;">
+        Happy Valentines Day Jan💘
       </div>
       
       <!-- 🔥 Back Button - Goes to Page 1 🔥 -->
@@ -381,9 +438,9 @@
     (function() {
       // Roses animation
       const container = document.getElementById('roseContainer');
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0; i < 30; i++) {
         const rose = document.createElement('div'); rose.className = 'rose';
-        const size = Math.floor(Math.random() * 35 + 25);
+        const size = Math.floor(Math.random() * 30 + 20);
         rose.style.width = size + 'px'; rose.style.height = size + 'px';
         rose.style.left = Math.random() * 100 + '%';
         rose.style.animationDuration = (Math.random() * 8 + 7) + 's';
@@ -395,11 +452,11 @@
       const emojiContainer = document.getElementById('emojiContainer');
       if (emojiContainer) {
         const emojis = ['❤️','🧡','💛','💚','💙','💜','🩷','💖','💗','💘','💝','💕','💞','💓'];
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 40; i++) {
           const em = document.createElement('div'); em.className = 'love-emoji';
           em.innerText = emojis[Math.floor(Math.random() * emojis.length)];
           em.style.left = Math.random() * 100 + '%'; em.style.top = Math.random() * 100 + '%';
-          em.style.fontSize = (Math.random() * 30 + 24) + 'px';
+          em.style.fontSize = (Math.random() * 30 + 20) + 'px';
           em.style.animationDuration = (Math.random() * 6 + 6) + 's';
           em.style.animationDelay = Math.random() * 5 + 's';
           emojiContainer.appendChild(em);
